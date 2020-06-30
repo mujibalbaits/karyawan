@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+using Hitung_Gaji_Karyawan.Classgede;
+namespace Hitung_Gaji_Karyawan.Classkecil
+{
+    class KaryawanHarian : Karyawan
+    {
+        public double UpahPerJam { get; set; }
+        public double JumlahJamKerja { get; set; }
+        public override double Gaji()
+        {
+            return UpahPerJam * JumlahJamKerja;
+        }
+    }
+}

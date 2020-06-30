@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+
+using Hitung_Gaji_Karyawan.Classgede;
+using Hitung_Gaji_Karyawan.Classkecil;
+
+namespace Hitung_Gaji_Karyawan
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            KaryawanHarian bk = new KaryawanHarian();
+            bk.Nik = "19.11.2630";
+            bk.Nama = "albaits";
+            bk.UpahPerJam = 30000;
+            bk.JumlahJamKerja = 10;
+
+            KaryawanTetap kj = new KaryawanTetap();
+            kj.Nik = "19.11.9999";
+            kj.Nama = "mujib";
+            kj.GajiBulanan = 9000000;
+
+            Sales ss = new Sales();
+            ss.Nik = "00.22.3434";
+            ss.Nama = "novel";
+            ss.JumlahPenjualan = 100;
+            ss.Komisi = 20000;
+
+
+
+            // Create list
+            List<Karyawan> lk = new List<Karyawan>();
+
+            // add object ke list
+            lk.Add(bk);
+            lk.Add(kj);
+            lk.Add(ss);
+
+            int urutan = 1;
+
+            // Perulangan untuk menampilkan
+            foreach (Karyawan kj in lk)
+            {
+                Console.WriteLine(urutan + ". " + "Nik: " +kw.Nik+ ",\t Nama: " +kw.Nama+ ",\t Gaji: " +kw.Gaji());
+
+                urutan++;
+            }
+            Console.ReadKey();
+        }
+    }
+}
